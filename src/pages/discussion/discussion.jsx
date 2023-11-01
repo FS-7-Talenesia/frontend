@@ -48,7 +48,7 @@ function Discussion() {
           content="Lorem ipsum dolor sit amet consectetur. Viverra semper vulputate ante tristique elementum ut rhoncus urna nullam. Fusce tellus eget et sem aliquet nunc."
           author="Agus"
           date="17 Agustus 2023"
-          status="open"
+          status="close"
           answerCount={3}
         />
       </Container>
