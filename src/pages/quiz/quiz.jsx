@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import MultipleChoice from "../../components/multipleChoice/multipleChoice";
 import {
   Container,
@@ -11,13 +10,8 @@ import {
 import { MdChevronRight } from "react-icons/md";
 
 function Quiz() {
-  const [selectedChoice, setSelectedChoice] = useState("");
   const question = "What is your favorite color?";
   const choices = ["Red", "Green", "Blue", "Yellow", "Orange"];
-
-  const handleChoiceChange = (choice) => {
-    setSelectedChoice(choice);
-  };
 
   return (
     <div>
@@ -43,13 +37,7 @@ function Quiz() {
           <Text textStyle="h1">Judul Kuiz</Text>
         </Box>
 
-        <MultipleChoice
-          question={question}
-          choices={choices}
-          selectedChoice={selectedChoice}
-          onChoiceChange={handleChoiceChange}
-        />
-        <p>You selected: {selectedChoice}</p>
+        <MultipleChoice question={question} choices={choices} />
       </Container>
     </div>
   );
