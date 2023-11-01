@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "./multipleChoice.css";
 import { Text, Radio, RadioGroup, Box, VStack } from "@chakra-ui/react";
 
-function MultipleChoice({ question, choices, onChoiceChange }) {
+function MultipleChoice({ question, choices }) {
   const [selectedChoice, setSelectedChoice] = useState("");
 
   const handleChoiceChange = (choice) => {
     setSelectedChoice(choice);
-    onChoiceChange(choice);
   };
 
   return (
@@ -37,6 +36,7 @@ function MultipleChoice({ question, choices, onChoiceChange }) {
           </VStack>
         ))}
       </RadioGroup>
+      <p>You selected: {selectedChoice}</p>
     </div>
   );
 }
