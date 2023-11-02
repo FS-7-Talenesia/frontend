@@ -1,10 +1,11 @@
-import Quiz from "./pages/quiz/quiz";
+import SidebarDashboard from "./components/sidebar/SidebarDashboard";
+import SidebarLearning from "./components/sidebar/SidebarLearning";
 
 function App() {
   return (
     <div>
-      <h1>Hello Gaes!</h1>
-      <Quiz />
+      <SidebarDashboard />
+      <SidebarLearning />
     </div>
   );
 }
