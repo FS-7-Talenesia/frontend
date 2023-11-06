@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 // import Discussion from "./pages/discussion/discussion";
 // import Quiz from "./pages/quiz/quiz";
 import SidebarDashboard from "./components/sidebar/SidebarDashboard";
@@ -8,7 +9,7 @@ function App() {
     <div>
       {/* <Quiz /> */}
       {/* <Discussion /> */}
-      <SidebarDashboard />
+      {/* <SidebarDashboard /> */}
       <SidebarLearning />
     </div>
   );
