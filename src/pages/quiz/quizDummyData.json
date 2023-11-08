@@ -1,0 +1,46 @@
+[
+    {
+      "question": "What Color is your Bugatti?",
+      "choices": ["Red", "Green", "Blue", "Yellow", "Orange"]
+    },
+    {
+      "question": "What is the capital of France?",
+      "choices": ["Paris", "London", "Berlin", "Madrid", "Rome"]
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "choices": ["Jupiter", "Saturn", "Neptune", "Uranus", "Mars"]
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies aliquam, nunc nisl ultricies nunc, quis aliquet nisl nunc quis nisl.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies aliquam, nunc nisl ultricies nunc, quis aliquet nisl nunc quis nisl.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies aliquam, nunc nisl ultricies nunc, quis aliquet nisl nunc quis nisl.",
+      "choices": ["Jupiter", "Saturn", "Neptune", "Uranus", "Mars"]
+    },
+    {
+      "question": "What is the capital of Italy?",
+      "choices": ["Rome", "Paris", "London", "Berlin", "Madrid"]
+    },
+    {
+      "question": "What is the smallest planet in our solar system?",
+      "choices": ["Mercury", "Venus", "Earth", "Mars", "Jupiter"]
+    },
+    {
+      "question": "What is the largest mammal in the world?",
+      "choices": ["Blue Whale", "African Elephant", "Giraffe", "Hippopotamus"]
+    },
+    {
+        "question": "What is the main ingredient in pizza?",
+        "choices": ["Dough", "Cheese", "Tomato Sauce", "Pepperoni", "Mushrooms"]
+    },
+
+    {
+    "question": "What is the capital of Japan?",
+    "choices": ["Tokyo", "Beijing", "Seoul", "Shanghai", "Bangkok"]
+    },
+
+    {
+    "question": "What is the largest desert in the world?",
+    "choices": ["Sahara", "Arctic", "Gobi", "Atacama", "Kalahari"]
+    }
+]
+
+  
