@@ -23,7 +23,7 @@ function ForumCard({ title, content, author, date, status, answerCount }) {
 
             <Spacer />
             <Badge colorScheme={status === "open" ? "green" : "red"}>
-              {status === true ? "Sudah Selesai" : "Belum Selesai"}
+              {status === "open" ? "Sudah Selesai" : "Belum Selesai"}
             </Badge>
           </HStack>
         </CardHeader>

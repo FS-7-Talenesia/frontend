@@ -1,20 +1,17 @@
 import React, { useState } from "react";
-import "./multipleChoice.css";
+
 import { Text, Radio, RadioGroup, Box, VStack } from "@chakra-ui/react";
 
-function MultipleChoice({ question, choices }) {
-  const [selectedChoice, setSelectedChoice] = useState("");
-
-  const handleChoiceChange = (choice) => {
-    setSelectedChoice(choice);
-  };
-
+function MultipleChoice({ question, choices, handler, selectedChoice }) {
   return (
     <div>
-      <Text textStyle="h2" fontWeight="normal" mb={4}>
+      <Text textStyle="h3" fontWeight="normal" mb={4}>
         {question}
       </Text>
-      <RadioGroup onChange={handleChoiceChange} value={selectedChoice}>
+      <RadioGroup
+        onChange={handler ? handler : () => {}}
+        value={selectedChoice ? selectedChoice : ""}
+      >
         {choices.map((choice, index) => (
           <VStack key={index}>
             <Box
@@ -36,7 +33,7 @@ function MultipleChoice({ question, choices }) {
           </VStack>
         ))}
       </RadioGroup>
-      <p>You selected: {selectedChoice}</p>
+      {/* <p>You selected: {selectedChoice}</p> */}
     </div>
   );
 }
