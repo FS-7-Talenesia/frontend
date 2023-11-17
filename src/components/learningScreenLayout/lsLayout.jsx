@@ -11,6 +11,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { MdChevronRight, MdMenu } from "react-icons/md";
+import SidebarLearning from "../sidebar/SidebarLearning";
 
 function LsLayout({ courseName, moduleName, chapterName, finish, layoutType }) {
   const initialStartTime = Date.now();
@@ -48,6 +49,8 @@ function LsLayout({ courseName, moduleName, chapterName, finish, layoutType }) {
   const minutes = Math.floor(timer / 60);
   const seconds = timer % 60;
 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <div>
       <Button
@@ -57,6 +60,7 @@ function LsLayout({ courseName, moduleName, chapterName, finish, layoutType }) {
         _hover={{ background: "leafGreen" }}
         borderRadius="0 10px 10px 0"
         left={0}
+        onClick={() => setIsSidebarOpen(true)}
       >
         <MdMenu color="dark.100" />
       </Button>
@@ -101,6 +105,19 @@ function LsLayout({ courseName, moduleName, chapterName, finish, layoutType }) {
             )}
           </HStack>
         </Box>
+      </Box>
+      <Box
+        position="fixed"
+        top={0}
+        left={isSidebarOpen ? 0 : "-100%"}
+        width="30vw"
+        height="100vh"
+        background="white"
+        transition="all 0.4s ease-in-out"
+        boxShadow="md"
+        zIndex={999}
+      >
+        <SidebarLearning onClose={() => setIsSidebarOpen(false)} />
       </Box>
     </div>
   );
