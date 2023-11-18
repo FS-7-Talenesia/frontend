@@ -1,14 +1,19 @@
 // eslint-disable-next-line no-unused-vars
-import SidebarDashboard from "./components/sidebar/SidebarDashboard";
-import SidebarLearning from "./components/sidebar/SidebarLearning";
+import SidebarDashboard from "./components/sidebar/SidebarDashboard"
+import Dashboard from "./pages/dashboard/dashboard"
+import { Flex } from "@chakra-ui/react"
+import SidebarLearning from "./components/sidebar/SidebarLearning"
 
 function App() {
   return (
     <div>
-      {/* <SidebarDashboard /> */}
-      <SidebarLearning />
+      <Flex>
+        <SidebarDashboard />
+        <Dashboard />
+      </Flex>
+      {/* <SidebarLearning /> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -17,16 +17,7 @@
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-icons": "^4.11.0"
-=======
-    "react-icons": "^4.11.0",
-    "react-markdown": "^9.0.0",
-    "remark-gfm": "^4.0.0",
-    "remark-images": "^4.0.0",
-    "remark-slug": "^7.0.1",
-    "remark-toc": "^9.0.0"
->>>>>>> 6344b01be0ae065031f5f0c8e655417a477975ca
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
