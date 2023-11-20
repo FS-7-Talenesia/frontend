@@ -1,33 +1,72 @@
 // eslint-disable-next-line no-unused-vars
-import SidebarDashboard from "./components/sidebar/SidebarDashboard"
-import Dashboard from "./pages/dashboard/dashboard"
-import SidebarLearning from "./components/sidebar/SidebarLearning"
-import Profile from "./components/profile/ProfileComponents"
-import Badges from "./components/progressBelajar/Badges"
-import Grade from "./components/progressBelajar/Grade"   
 
-import { Flex } from "@chakra-ui/react"
-import Discussion from "./pages/discussion/discussion"
-import Quiz from "./pages/quiz/quiz"
-import Material from "./pages/material/material"
-import ForumDetail from "./pages/forumDetail/forumDetail"
-import PreQuiz from "./pages/preQuiz/preQuiz"
-import QuizReview from "./pages/quizreview/quizReview"
-import FileSubmission from "./pages/fileSubmission/fileSubmission"
+import Dashboard from "./pages/Dashboard/Dashboard";
 
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+
+import Profile from "./pages/profile/Profile";
+import Achievement from "./pages/achievement/Achievement";
+import CourseSelection from "./pages/courseSelection/courseSelection";
+import Grades from "./pages/grades/Grades";
+import ModuleSelection from "./pages/moduleSelection/moduleSelection";
+import ChapterSelection from "./pages/chapterSelection/chapterSelection";
+import Material from "./pages/material/material";
+import Discussion from "./pages/discussion/discussion";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Dashboard />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
+  {
+    path: "/courses",
+    element: <CourseSelection />,
+  },
+  {
+    path: "/achievements",
+    element: <Achievement />,
+  },
+  {
+    path: "/grades",
+    element: <Grades />,
+  },
+  {
+    path: "/logout",
+    element: <CourseSelection />,
+    // halaman non page
+  },
+  {
+    path: "/courses/modules",
+    element: <ModuleSelection />,
+  },
+  {
+    path: "/courses/modules/chapters",
+    element: <ChapterSelection />,
+  },
+  {
+    path: "/learn",
+    element: <Material />,
+  },
+  {
+    path: "/learn/forum",
+    element: <Discussion />,
+  },
+]);
 function App() {
   return (
     <div>
-      <Flex>
-        <SidebarDashboard />
-        <Dashboard />
-
-        {/* <Grade /> */}
-        {/* <Badges /> */}
-        {/* <Profile /> */}
-      </Flex>
-      {/* <SidebarLearning /> */}
+      <RouterProvider router={router} />
     </div>
-  )
+  );
 }
 
+export default App;

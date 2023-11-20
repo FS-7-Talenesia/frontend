@@ -16,7 +16,6 @@ import { IoLockClosed } from "react-icons/io5";
 function Badges() {
   return (
     <>
-      <SidebarDashboard />
       <Box
         w="100vw"
         h="100%"

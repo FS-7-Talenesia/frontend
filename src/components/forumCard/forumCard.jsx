@@ -10,10 +10,26 @@ import {
 } from "@chakra-ui/react";
 import { GoCommentDiscussion } from "react-icons/go";
 
-function ForumCard({ title, content, author, date, status, answerCount }) {
+function ForumCard({
+  title,
+  content,
+  author,
+  date,
+  status,
+  answerCount,
+  bgColor,
+  color,
+}) {
   return (
     <div>
-      <Card variant="outline" my={6} borderColor="dark.80">
+      <Card
+        variant="outline"
+        my={6}
+        borderColor="dark.80"
+        bgColor={bgColor}
+        color={color}
+        rounded={15}
+      >
         <CardHeader>
           <HStack>
             <VStack alignItems="left">

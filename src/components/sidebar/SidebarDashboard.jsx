@@ -7,7 +7,7 @@ import { BsBookFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { GiProgression } from "react-icons/gi";
 
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function SidebarDashboard() {
   return (
@@ -38,118 +38,135 @@ function SidebarDashboard() {
             fontSize={15}
             px={2}
           >
-            <ListItem
-              listStyleType="none"
-              _hover={{
-                background: "steelBlue",
-                color: "white",
-                padding: "8px",
-              }}
-              borderRadius="xl"
-              p="4px"
-              mt="4px"
-              my={2}
-            >
-              <Flex align="center">
-                <Box as={AiFillHome} mr={2} />
-                <Link to={`/`}>Dashboard</Link>
-              </Flex>
-            </ListItem>
-            <ListItem
-              listStyleType="none"
-              pt={5}
-              _hover={{
-                background: "steelBlue",
-                color: "white",
-                padding: "8px",
-              }}
-              borderRadius="xl"
-              p="4px"
-              mt="4px"
-              my={5}
-            >
-              <Flex align="center">
-                <Box as={BsBookFill} mr={2} />
-                <a href="#">KursusKu</a>
-              </Flex>
-            </ListItem>
-            <ListItem
-              listStyleType="none"
-              pt={5}
-              _hover={{
-                background: "steelBlue",
-                color: "white",
-                padding: "8px",
-              }}
-              borderRadius="xl"
-              p="4px"
-              mt="4px"
-              my={5}
-            >
-              <Flex align="center">
-                <Box as={CgProfile} mr={2} />
-                <Link to={`/profile`}>Profile</Link>
-              </Flex>
-            </ListItem>
-            <ListItem
-              listStyleType="none"
-              pt={5}
-              position="relative"
-              _hover={{
-                background: "steelBlue",
-                color: "white",
-                padding: "8px",
-              }}
-              borderRadius="xl"
-              p="4px"
-              mt="4px"
-              my={5}
-            >
-              <Flex align="center">
-                <Box as={GiProgression} mr={2} />
-                <a href="#">Progress Belajar</a>
-              </Flex>
-            </ListItem>
-            <ListItem
-              listStyleType="none"
-              pt={5}
-              _hover={{
-                background: "steelBlue",
-                color: "white",
-                padding: "8px",
-              }}
-              borderRadius="xl"
-              p="4px"
-              mt="4px"
-              my={5}
-            >
-              <Flex align="center">
-                <Box as={AiFillSetting} mr={2} />
-                <a href="#">Setting</a>
-              </Flex>
-            </ListItem>
-            <ListItem
-              listStyleType="none"
-              pt={5}
-              _hover={{
-                background: "steelBlue",
-                color: "white",
-                padding: "8px",
-              }}
-              borderRadius="xl"
-              p="4px"
-              mt="4px"
-              my={5}
-            >
-              <Flex align="center">
-                <Box as={BiLogOutCircle} mr={2} />
-                <a href="#">Log Out</a>
-              </Flex>
-            </ListItem>
+            <Link to={`/`}>
+              <ListItem
+                listStyleType="none"
+                _hover={{
+                  background: "steelBlue",
+                  color: "white",
+                  padding: "8px",
+                }}
+                borderRadius="xl"
+                p="4px"
+                mt="4px"
+                my={2}
+              >
+                <Flex align="center">
+                  <Box as={AiFillHome} mr={2} />
+                  Dashboard
+                </Flex>
+              </ListItem>
+            </Link>
+
+            <Link to={`/courses`}>
+              <ListItem
+                listStyleType="none"
+                pt={5}
+                _hover={{
+                  background: "steelBlue",
+                  color: "white",
+                  padding: "8px",
+                }}
+                borderRadius="xl"
+                p="4px"
+                mt="4px"
+                my={5}
+              >
+                <Flex align="center">
+                  <Box as={BsBookFill} mr={2} />
+                  <a href="#">KursusKu</a>
+                </Flex>
+              </ListItem>
+            </Link>
+
+            <Link to={`/profile`}>
+              <ListItem
+                listStyleType="none"
+                pt={5}
+                _hover={{
+                  background: "steelBlue",
+                  color: "white",
+                  padding: "8px",
+                }}
+                borderRadius="xl"
+                p="4px"
+                mt="4px"
+                my={5}
+              >
+                <Flex align="center">
+                  <Box as={CgProfile} mr={2} />
+                  Profile
+                </Flex>
+              </ListItem>
+            </Link>
+
+            <Link to={`/achievements`}>
+              <ListItem
+                listStyleType="none"
+                pt={5}
+                position="relative"
+                _hover={{
+                  background: "steelBlue",
+                  color: "white",
+                  padding: "8px",
+                }}
+                borderRadius="xl"
+                p="4px"
+                mt="4px"
+                my={5}
+              >
+                <Flex align="center">
+                  <Box as={GiProgression} mr={2} />
+                  <a href="#">Achievement</a>
+                </Flex>
+              </ListItem>
+            </Link>
+
+            <Link to={`/grades`}>
+              <ListItem
+                listStyleType="none"
+                pt={5}
+                _hover={{
+                  background: "steelBlue",
+                  color: "white",
+                  padding: "8px",
+                }}
+                borderRadius="xl"
+                p="4px"
+                mt="4px"
+                my={5}
+              >
+                <Flex align="center">
+                  <Box as={AiFillSetting} mr={2} />
+                  <a href="#">Nilai</a>
+                </Flex>
+              </ListItem>
+            </Link>
+
+            <Link to={`/logout`}>
+              <ListItem
+                listStyleType="none"
+                pt={5}
+                _hover={{
+                  background: "steelBlue",
+                  color: "white",
+                  padding: "8px",
+                }}
+                borderRadius="xl"
+                p="4px"
+                mt="4px"
+                my={5}
+              >
+                <Flex align="center">
+                  <Box as={BiLogOutCircle} mr={2} />
+                  <a href="#">Log Out</a>
+                </Flex>
+              </ListItem>
+            </Link>
           </UnorderedList>
         </Box>
       </Box>
-    <div/>
+    </div>
   );
 }
 

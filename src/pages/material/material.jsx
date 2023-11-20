@@ -16,13 +16,8 @@ import {
   useSteps,
   Image,
 } from "@chakra-ui/react";
-// import LsLayout from "../../components/learningScreenLayout/lsLayout";
-// import { HiArrowRightCircle, HiArrowLeftCircle } from "react-icons/hi2";
-// import Markdown from "react-markdown";
-// import remarkGfm from "remark-gfm";
-// import remarkSlug from "remark-slug";
-// import remarkToc from "remark-toc";
-// import remarkImages from "remark-images";
+import LsLayout from "../../components/learningScreenLayout/lsLayout";
+import { HiArrowRightCircle, HiArrowLeftCircle } from "react-icons/hi2";
 
 const Material = () => {
   const [isFinisihed, setFinished] = useState(false);
@@ -103,12 +98,7 @@ const Material = () => {
             my={4}
           />
           <Image src={material.image} />
-          <Box>
-            <Markdown
-              remarkPlugins={[remarkGfm, remarkSlug, remarkToc, remarkImages]}
-              children={material.materialContent}
-            />
-          </Box>
+          <Box>{material.materialContent}</Box>
         </Box>
       ))}
 

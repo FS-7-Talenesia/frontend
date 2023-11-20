@@ -1,7 +1,8 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react"
-import { Box, Grid, GridItem, Text, Flex, Stack } from "@chakra-ui/react"
-import { IoPeopleCircleSharp, IoLocationOutline } from "react-icons/io5"
+import React from "react";
+import { Box, Grid, GridItem, Text, Flex, Stack } from "@chakra-ui/react";
+import { IoPeopleCircleSharp, IoLocationOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function ProfileComponents() {
   return (
@@ -212,30 +213,32 @@ function ProfileComponents() {
             >
               Kursus yang Saya Ikuti
             </Text>
-            <Box bg="leafGreen" p={3} m={2} mx={5} rounded={20}>
-              <Text
-                fontSize="17px"
-                my={0.6}
-                mx={2}
-                p={0.2}
-                fontFamily="Overlock"
-                color="white"
-                fontWeight="bold"
-              >
-                Kelas Intensif - Administrasi Perkantoran
-              </Text>
-              <Text
-                fontSize="15px"
-                my={0.6}
-                mx={2}
-                p={0.2}
-                fontFamily="Overlock"
-                color="white"
-                fontWeight="italic"
-              >
-                Progress Penyelesaian: 3%
-              </Text>
-            </Box>
+            <Link to="/courses/modules" style={{ textDecoration: "none" }}>
+              <Box bg="leafGreen" p={3} m={2} mx={5} rounded={20}>
+                <Text
+                  fontSize="17px"
+                  my={0.6}
+                  mx={2}
+                  p={0.2}
+                  fontFamily="Overlock"
+                  color="white"
+                  fontWeight="bold"
+                >
+                  Kelas Intensif - Administrasi Perkantoran
+                </Text>
+                <Text
+                  fontSize="15px"
+                  my={0.6}
+                  mx={2}
+                  p={0.2}
+                  fontFamily="Overlock"
+                  color="white"
+                  fontWeight="italic"
+                >
+                  Progress Penyelesaian: 25%
+                </Text>
+              </Box>
+            </Link>
           </GridItem>
           <GridItem
             rowSpan={1}
@@ -278,7 +281,7 @@ function ProfileComponents() {
                 color="white"
                 fontWeight="italic"
               >
-                -
+                20 November 2023, 23.36
               </Text>
             </Box>
             <Box bg="leafGreen" p={3} m={2} mx={5} rounded={20}>
@@ -302,14 +305,14 @@ function ProfileComponents() {
                 color="white"
                 fontWeight="italic"
               >
-                -
+                21 November 2023, 16.15
               </Text>
             </Box>
           </GridItem>
         </Grid>
       </Box>
     </>
-  )
+  );
 }
 
-export default ProfileComponents
+export default ProfileComponents;

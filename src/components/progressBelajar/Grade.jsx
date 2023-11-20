@@ -20,7 +20,6 @@ import SidebarDashboard from "../sidebar/SidebarDashboard";
 function Grade() {
   return (
     <>
-      <SidebarDashboard />
       <Box
         w="100vw"
         h="100%"

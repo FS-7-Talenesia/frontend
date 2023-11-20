@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react"
+import React from "react";
 import {
   Box,
   Stack,
@@ -8,12 +8,14 @@ import {
   GridItem,
   Progress,
   Flex,
-} from "@chakra-ui/react"
-import { FaCalendarAlt } from "react-icons/fa"
-import { IoIosAlarm } from "react-icons/io"
-import SidebarDashboard from "../../components/sidebar/SidebarDashboard"
+  textDecoration,
+} from "@chakra-ui/react";
+import { FaCalendarAlt } from "react-icons/fa";
+import { IoIosAlarm } from "react-icons/io";
+import { Link } from "react-router-dom";
+import ForumCard from "../forumCard/forumCard";
 
-function Dashboard() {
+function DashboardComponent() {
   return (
     <>
       <Box w="100vw" h="100%" p={4} top={0} left={0} ml={350} maxWidth="80vw">
@@ -52,31 +54,37 @@ function Dashboard() {
                   color="white"
                   fontWeight="bold"
                 >
-                  Kursus Belajar HRGA
+                  Admin Perkantoran
                 </Text>
                 <Stack>
                   <Progress
                     colorScheme="green"
                     size="xs"
                     hasStripe
-                    value={75}
+                    value={25}
                     mx={2}
                   ></Progress>
                 </Stack>
                 <Text my={1} mx={1} p={0.5} color="white" fontFamily="overlock">
-                  Progress Penyelesaian : 75%
+                  Progress Penyelesaian : 25%
                 </Text>
-                <Box bgColor="babyGreen" rounded={10} m={5} p={0.5}>
-                  <Text
-                    mx={2}
-                    textAlign="center"
-                    color="black"
-                    fontFamily="overlock"
-                    fontWeight="italic"
-                  >
-                    Lanjutkan Modul Terakhir: Belajar Cara Belajar 1
-                  </Text>
-                </Box>
+
+                <Link
+                  to={`/courses/modules/chapters`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Box bgColor="babyGreen" rounded={10} m={5} p={0.5}>
+                    <Text
+                      mx={2}
+                      textAlign="center"
+                      color="black"
+                      fontFamily="overlock"
+                      fontWeight="italic"
+                    >
+                      Lanjutkan Modul Terakhir: Belajar Cara Belajar 1
+                    </Text>
+                  </Box>
+                </Link>
               </GridItem>
             </Grid>
           </GridItem>
@@ -132,6 +140,20 @@ function Dashboard() {
             >
               Diskusi Terbaru
             </Text>
+            <Link to={`learn/forum`} style={{ textDecoration: "none" }}>
+              <Box mx={2} my={2}>
+                <ForumCard
+                  title="Bagaimana Menjadi Admin yang Hebat?"
+                  content="Lorem ipsum dolor sit amet consectetur. Viverra semper vulputate ante tristique elementum ut rhoncus urna nullam. Fusce tellus eget et sem aliquet nunc."
+                  author="Agus"
+                  date="17 Agustus 2023"
+                  status="open"
+                  answerCount={3}
+                  bgColor="deepBlueSea"
+                  color="white"
+                />
+              </Box>
+            </Link>
           </GridItem>
           {/* Tugas yang harus diselesaikan */}
           <GridItem w="100%" h="100%" bg="steelBlue" rounded={25} name="">
@@ -171,7 +193,7 @@ function Dashboard() {
         </Grid>
       </Box>
     </>
-  )
+  );
 }
 
-export default Dashboard
+export default DashboardComponent;
