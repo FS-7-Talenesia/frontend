@@ -7,6 +7,8 @@ import { BsBookFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { GiProgression } from "react-icons/gi";
 
+import { Link } from "react-router-dom"
+
 function SidebarDashboard() {
   return (
     <>
@@ -50,7 +52,7 @@ function SidebarDashboard() {
             >
               <Flex align="center">
                 <Box as={AiFillHome} mr={2} />
-                <a href="#">Dashboard</a>
+                <Link to={`/`}>Dashboard</Link>
               </Flex>
             </ListItem>
             <ListItem
@@ -86,7 +88,7 @@ function SidebarDashboard() {
             >
               <Flex align="center">
                 <Box as={CgProfile} mr={2} />
-                <a href="#">Profile</a>
+                <Link to={`/profile`}>Profile</Link>
               </Flex>
             </ListItem>
             <ListItem
