@@ -6,6 +6,7 @@ this is the frontend component of the LMS project, it is built with React and Vi
 
 ## Table of Contents
 - [Getting Started](#getting-started)
+- [Pages](#pages)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Available Scripts](#available-scripts)
@@ -18,10 +19,10 @@ Before running the LMS Talenesia frontend application locally, ensure that the c
 
 ### Installation
  First, clone the project:
-    1. Clone the project repository 'git clone `git clone https://github.com/FS-7-Talenesia/frontend.git`
-    2. Navigate to the project directory `cd frontend`
-    3. Install the dependencies `npm install`
-    4. Run the application `vite`    
+ 1. Clone the project repository 'git clone `git clone https://github.com/FS-7-Talenesia/frontend.git`
+ 2. Navigate to the project directory `cd frontend`
+ 3. Install the dependencies `npm install`
+ 4. Run the application `vite`    
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `src/App.jsx`. The page auto-updates as you edit the file.
@@ -41,29 +42,56 @@ The following pages are available in the application:
 - Learn Forum (`/learn/forum`): Displays the discussion forum page for the learning material.
 - Login (`/login`): Displays the login page.
 
+## Features 
+The following features are available in the application:
+
+- Login: Users can login to the application.
+- Logout: Users can logout of the application.  
+- Dashboard: Users can view the dashboard with the course information.
+- Profile: Users can view their profile.
+- Courses: Users can view the course selection page.
+- Achievements: Users can view their achievements.
+- Grades: Users can view their grades.
+- Course Modules: Users can view the module selection page for a specific course.
+- Course Modules Chapters: Users can view the chapter selection page for a specific module.
+- Learn: Users can view the learning material page.
+- Learn Forum: Users can view the discussion forum page for the learning material.  
+
+## Tech Stack
+The following technologies are used in the project:     
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Vite](https://vitejs.dev/) - A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library that gives you the building blocks you need to build your React applications.
+- [React Router](https://reactrouter.com/) - A collection of navigational components that compose declaratively with your application.
+- [React Icons](https://react-icons.github.io/react-icons/) - A collection of icons for popular icon libraries. 
+- axios - Promise based HTTP client for the browser and node.js.
+- [ESLint](https://eslint.org/) - A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript.
+and many more.
+
 ## Available Scripts
  This is the list of available scripts that you can run in the project directory:
 
-    ### vite
-    Runs the app in the development mode.   
-    Open http://localhost:3000 to view it in the browser.
-    The page will reload if you make edits.
-    You will also see any lint errors in the console.
+```
+### vite
+Runs the app in the development mode.   
+Open http://localhost:3000 to view it in the browser.
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-    ### vite build
-    Builds the app for production to the `build` folder.
-    It correctly bundles React in production mode and optimizes the build for the best performance.
-    The build is minified and the filenames include the hashes.
-    Your app is ready to be deployed!
-    See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### vite build
+Builds the app for production to the `build` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-    ### vite preview  
-    Starts a server that serves your built project.
-    The server will use port 5000 by default unless it is already in use.
+### vite preview  
+Starts a server that serves your built project.
+The server will use port 5000 by default unless it is already in use.
 
-    ### vite lint
-    Runs [ESLint](https://eslint.org/) on your project.
-
+### vite lint
+Runs [ESLint](https://eslint.org/) on your project.
+```
 
 ## Project Structure
 
