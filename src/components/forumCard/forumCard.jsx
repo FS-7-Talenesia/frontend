@@ -13,7 +13,7 @@ import { GoCommentDiscussion } from "react-icons/go";
 function ForumCard({ title, content, author, date, status, answerCount }) {
   return (
     <div>
-      <Card variant="outline" my={6}>
+      <Card variant="outline" my={6} borderColor="dark.80">
         <CardHeader>
           <HStack>
             <VStack alignItems="left">

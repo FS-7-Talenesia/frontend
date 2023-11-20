@@ -1,7 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 
 import { Text, Radio, RadioGroup, Box, VStack } from "@chakra-ui/react";
 
+// eslint-disable-next-line react/prop-types
 function MultipleChoice({ question, choices, handler, selectedChoice }) {
   return (
     <div>

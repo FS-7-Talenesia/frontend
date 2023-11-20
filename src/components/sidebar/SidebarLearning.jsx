@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 import {
   Accordion,
   AccordionButton,
@@ -12,17 +13,15 @@ import {
   Progress,
   LinkOverlay,
   LinkBox,
+  Link,
 } from "@chakra-ui/react";
 
 import "../sidebar/sidebar.css";
 
 function SidebarLearning({ onClose }) {
-  const handleClose = () => {
-    onClose();
-  };
-
   return (
     <div>
+      {/* Module */}
       <Box width="30vw" height="100vh" boxShadow="dark-lg">
         <Flex>
           <Box p={4}>
@@ -30,8 +29,8 @@ function SidebarLearning({ onClose }) {
               size="md"
               bg="statusRed"
               borderRadius="2xl"
-              onClick={handleClose}
-            />{" "}
+              onClick={onClose}
+            />
           </Box>
           <Box p={4} pr={2} pl={2}>
             <Text fontFamily="overlock" fontSize={23}>
