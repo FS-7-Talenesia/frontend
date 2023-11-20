@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react"
 import { FaCalendarAlt } from "react-icons/fa"
 import { IoIosAlarm } from "react-icons/io"
+import SidebarDashboard from "../../components/sidebar/SidebarDashboard"
 
 function Dashboard() {
   return (

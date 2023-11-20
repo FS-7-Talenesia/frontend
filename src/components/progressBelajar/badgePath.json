@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Beginner Courage",
+        "path": "/src/assets/badgeDesign/1.png",
+        "completed" : true
+    },
+    {
+        "name": "Super Office!",
+        "path": "/src/assets/badgeDesign/2.png",
+        "completed" : true
+    },
+    {
+        "name": "Google Collaboration",
+        "path": "/src/assets/badgeDesign/3.png",
+        "completed" : true
+    },
+    {
+        "name": "Database Super",
+        "path": "/src/assets/badgeDesign/4.png",
+        "completed" : true
+    },
+    {
+        "name": "Team Recruiters",
+        "path": "/src/assets/badgeDesign/5.png",
+        "completed" : false
+    },
+    {
+        "name": "Professional Talker",
+        "path": "/src/assets/badgeDesign/6.png",
+        "completed" : false
+        
+    },
+    {
+        "name": "OCD, or is it just Me?",
+        "path": "/src/assets/badgeDesign/7.png",
+        "completed" : false
+    },
+    {
+        "name": "Dream Candidate",
+        "path": "/src/assets/badgeDesign/8.png",
+        "completed" : false
+    },
+    {
+        "name": "Papers, Please!",
+        "path": "/src/assets/badgeDesign/9.png",
+        "completed" : false
+    },
+    {
+        "name": "Superhuman Logistic",
+        "path": "/src/assets/badgeDesign/10.png",
+        "completed" : false
+    },
+    {
+        "name": "Job Hunter",
+        "path": "/src/assets/badgeDesign/11.png",
+        "completed" : false
+    },
+    {
+        "name": "Honorable Ethics",
+        "path": "/src/assets/badgeDesign/12.png",
+        "completed" : false
+    },
+    {
+        "name": "Great Negotiator",
+        "path": "/src/assets/badgeDesign/13.png",
+        "completed" : false
+    }
+  ]

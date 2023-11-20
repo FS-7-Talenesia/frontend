@@ -11,7 +11,7 @@ function Profile() {
         <ProfileComponents />
       </Flex>
     </>
-  )
+  );
 }
 
-export default Profile
+export default Profile;
