@@ -1,12 +1,22 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react"
-import { Box, Grid, GridItem, Text, Flex, Stack } from "@chakra-ui/react"
-import { IoPeopleCircleSharp, IoLocationOutline } from "react-icons/io5"
+import React from "react";
+import { Box, Grid, GridItem, Text, Flex, Stack } from "@chakra-ui/react";
+import { IoPeopleCircleSharp, IoLocationOutline } from "react-icons/io5";
+import SidebarDashboard from "../../components/sidebar/SidebarDashboard";
 
 function Profile() {
   return (
     <>
-      <Box w="100vw" h="100%" p={4} top={0} left={0} ml={250} maxWidth="80vw">
+      <SidebarDashboard />
+      <Box
+        w="100vw"
+        h="100%"
+        p={4}
+        top={0}
+        left={0}
+        ml={"20vw"}
+        maxWidth="80vw"
+      >
         <Stack m={2} p={2}>
           <Text fontSize={29} fontFamily={"Overlock"}>
             My Profile
@@ -309,7 +319,7 @@ function Profile() {
         </Grid>
       </Box>
     </>
-  )
+  );
 }
 
-export default Profile
+export default Profile;

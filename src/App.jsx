@@ -17,14 +17,11 @@ import FileSubmission from "./pages/fileSubmission/fileSubmission";
 function App() {
   return (
     <div>
-      <Flex>
-        <SidebarDashboard />
-        {/* <Grade /> */}
-        {/* <Badges /> */}
-        {/* <Profile /> */}
-      </Flex>
+      {/* <Grade /> */}
+      {/* <Badges /> */}
+      <Profile />
+
       {/* <Dashboard /> */}
-      {/* <SidebarLearning /> */}
       {/* <Quiz /> */}
       {/* <Discussion /> */}
       {/* <Material /> */}
