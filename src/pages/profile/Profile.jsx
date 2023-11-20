@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react"
 import { Box, Grid, GridItem, Text, Flex, Stack } from "@chakra-ui/react"
 import { IoPeopleCircleSharp, IoLocationOutline } from "react-icons/io5"
