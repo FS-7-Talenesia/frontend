@@ -4,7 +4,7 @@ import Dashboard from "./pages/dashboard/dashboard"
 import SidebarLearning from "./components/sidebar/SidebarLearning"
 import Profile from "./components/profile/ProfileComponents"
 import Badges from "./components/progressBelajar/Badges"
-import Grade from "./components/progressBelajar/Grade"
+import Grade from "./components/progressBelajar/Grade"   
 
 import { Flex } from "@chakra-ui/react"
 import Discussion from "./pages/discussion/discussion"
@@ -31,4 +31,3 @@ function App() {
   )
 }
 
-export default App

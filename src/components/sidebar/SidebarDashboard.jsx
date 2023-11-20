@@ -11,7 +11,7 @@ import { Link } from "react-router-dom"
 
 function SidebarDashboard() {
   return (
-    <>
+    <div>
       <Box
         width="20vw"
         boxShadow="dark-lg"
@@ -149,7 +149,7 @@ function SidebarDashboard() {
           </UnorderedList>
         </Box>
       </Box>
-    </>
+    <div/>
   );
 }
 
