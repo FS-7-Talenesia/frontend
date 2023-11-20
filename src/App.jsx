@@ -17,6 +17,7 @@ import ModuleSelection from "./pages/moduleSelection/moduleSelection";
 import ChapterSelection from "./pages/chapterSelection/chapterSelection";
 import Material from "./pages/material/material";
 import Discussion from "./pages/discussion/discussion";
+import Login from "./pages/loginPage/login";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
   {
     path: "/learn/forum",
     element: <Discussion />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 function App() {

@@ -69,7 +69,6 @@ function HsLayout({ breadOne, breadTwo, breadThree, breadFour }) {
         transition="all 0.4s ease-in-out"
         zIndex={999}
       >
-        <SidebarDashboard onClose={() => setIsSidebarOpen(false)} />
       </Box>
     </div>
   );
