@@ -15,7 +15,7 @@ import { IoIosAlarm } from "react-icons/io"
 function Dashboard() {
   return (
     <>
-      <Box w="100vw" h="100%" p={4} top={0} left={0} ml={250} maxWidth="80vw">
+      <Box w="100vw" h="100%" p={4} top={0} left={0} ml={350} maxWidth="80vw">
         <Stack m={2} p={2}>
           <Text fontSize={29} fontFamily={"Overlock"}>
             Selamat Datang, User
