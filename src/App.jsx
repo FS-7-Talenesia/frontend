@@ -6,6 +6,7 @@ import SidebarDashboard from "./components/sidebar/SidebarDashboard";
 import SidebarLearning from "./components/sidebar/SidebarLearning";
 import Material from "./pages/material/material";
 import Login from "./pages/loginPage/login.jsx"
+import CourseSelection from "./pages/courseSelection/courseSelection.jsx"
 import React from 'react';
 
 const apiUrl = "https://fs-7-talenesia-backend.vercel.app";
@@ -19,7 +20,8 @@ function App() {
       {/* { <Discussion /> } */}
       {/* <Login/> */}
        {/* <ModuleSelection/>  */}
-       <Login/>
+       {/* <Login/> */}
+       <CourseSelection/>
        {/* <ChapterSelection/> */}
 
       {/* <Quiz /> */}
