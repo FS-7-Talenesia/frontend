@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -9,47 +9,48 @@ import {
   Badge,
   HStack,
   Button,
-} from "@chakra-ui/react";
-import { MdChevronRight, MdMenu } from "react-icons/md";
-import SidebarLearning from "../sidebar/SidebarLearning";
+} from "@chakra-ui/react"
+import { MdChevronRight, MdMenu } from "react-icons/md"
+import SidebarLearning from "../sidebar/SidebarLearning"
+import { Link } from "react-router-dom"
 
 function LsLayout({ courseName, moduleName, chapterName, finish, layoutType }) {
-  const initialStartTime = Date.now();
+  const initialStartTime = Date.now()
   const [startTime, setStartTime] = useState(
     Number(localStorage.getItem("startTime")) || initialStartTime
-  );
-  const [timer, setTimer] = useState(600);
+  )
+  const [timer, setTimer] = useState(600)
 
   useEffect(() => {
     if (layoutType === "quiz" && !startTime) {
-      const now = Date.now();
-      setStartTime(now);
-      localStorage.setItem("startTime", now.toString());
+      const now = Date.now()
+      setStartTime(now)
+      localStorage.setItem("startTime", now.toString())
     }
-  }, [layoutType, startTime]);
+  }, [layoutType, startTime])
 
   useEffect(() => {
     if (layoutType === "quiz" && startTime) {
       const interval = setInterval(() => {
-        const now = Date.now();
-        const elapsedSeconds = Math.floor((now - startTime) / 1000);
-        const remainingTime = 600 - elapsedSeconds;
+        const now = Date.now()
+        const elapsedSeconds = Math.floor((now - startTime) / 1000)
+        const remainingTime = 600 - elapsedSeconds
         if (remainingTime <= 0) {
-          setStartTime(now);
-          localStorage.setItem("startTime", now.toString());
-          setTimer(600);
+          setStartTime(now)
+          localStorage.setItem("startTime", now.toString())
+          setTimer(600)
         } else {
-          setTimer(remainingTime);
+          setTimer(remainingTime)
         }
-      }, 1000);
-      return () => clearInterval(interval);
+      }, 1000)
+      return () => clearInterval(interval)
     }
-  }, [layoutType, startTime]);
+  }, [layoutType, startTime])
 
-  const minutes = Math.floor(timer / 60);
-  const seconds = timer % 60;
+  const minutes = Math.floor(timer / 60)
+  const seconds = timer % 60
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   return (
     <div>
@@ -72,11 +73,15 @@ function LsLayout({ courseName, moduleName, chapterName, finish, layoutType }) {
           pt={4}
         >
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">Kursus Saya</BreadcrumbLink>
+            <Link to={`/courses`}>
+              <BreadcrumbLink href="#">Kursus Saya</BreadcrumbLink>
+            </Link>
           </BreadcrumbItem>
 
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">{courseName}</BreadcrumbLink>
+            <Link to={`/courses/modules`}>
+              <BreadcrumbLink href="#">{courseName}</BreadcrumbLink>
+            </Link>
           </BreadcrumbItem>
 
           <BreadcrumbItem isCurrentPage>
@@ -120,6 +125,6 @@ function LsLayout({ courseName, moduleName, chapterName, finish, layoutType }) {
         <SidebarLearning onClose={() => setIsSidebarOpen(false)} />
       </Box>
     </div>
-  );
+  )
 }
-export default LsLayout;
+export default LsLayout
