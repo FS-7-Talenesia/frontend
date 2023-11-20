@@ -11,7 +11,7 @@ import { GiProgression } from 'react-icons/gi'
 function SidebarDashboard() {
   return (
     <>
-      <Box width='20vw' boxShadow='dark-lg' height='100vh'>
+      <Box width='20vw' borderRight={"solid"} borderColor={"#E0E0E1"} height='100vh'>
         <Box>
           <Image
             src='/src/assets/Logo Full.jpg'

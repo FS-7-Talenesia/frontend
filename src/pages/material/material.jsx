@@ -16,13 +16,13 @@ import {
   useSteps,
   Image,
 } from "@chakra-ui/react";
-import LsLayout from "../../components/learningScreenLayout/lsLayout";
-import { HiArrowRightCircle, HiArrowLeftCircle } from "react-icons/hi2";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import remarkSlug from "remark-slug";
-import remarkToc from "remark-toc";
-import remarkImages from "remark-images";
+// import LsLayout from "../../components/learningScreenLayout/lsLayout";
+// import { HiArrowRightCircle, HiArrowLeftCircle } from "react-icons/hi2";
+// import Markdown from "react-markdown";
+// import remarkGfm from "remark-gfm";
+// import remarkSlug from "remark-slug";
+// import remarkToc from "remark-toc";
+// import remarkImages from "remark-images";
 
 const Material = () => {
   const [isFinisihed, setFinished] = useState(false);

@@ -11,22 +11,18 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { MdChevronRight, MdMenu } from "react-icons/md";
+import SidebarDashboard from "../sidebar/SidebarDashboard";
+
+
 
 function HsLayout({ breadOne, breadTwo, breadThree, breadFour }) {
   const lastBreadcrumb = breadFour || breadThree || breadTwo || breadOne;
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
 
   return (
     <div>
-      <Button
-        background="babyGreen"
-        my={70}
-        position={"fixed"}
-        _hover={{ background: "leafGreen" }}
-        borderRadius="0 10px 10px 0"
-        left={0}
-      >
-        <MdMenu color="dark.100" />
-      </Button>
+
       <Box>
         <Breadcrumb
           spacing="8px"
@@ -63,6 +59,17 @@ function HsLayout({ breadOne, breadTwo, breadThree, breadFour }) {
             <Text textStyle="h1" fontSize="40px">{lastBreadcrumb}</Text>
           </HStack>
         </Box>
+      </Box>
+      <Box
+        position="fixed"
+        top={0}
+        left={isSidebarOpen ? 0 : "-100%"}
+        height="100vh"
+        backgroundColor={"white"}
+        transition="all 0.4s ease-in-out"
+        zIndex={999}
+      >
+        <SidebarDashboard onClose={() => setIsSidebarOpen(false)} />
       </Box>
     </div>
   );
