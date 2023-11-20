@@ -5,6 +5,10 @@ import ChapterSelection from "./pages/chapterSelection/chapterSelection"
 import SidebarDashboard from "./components/sidebar/SidebarDashboard";
 import SidebarLearning from "./components/sidebar/SidebarLearning";
 import Material from "./pages/material/material";
+import Login from "./pages/loginPage/login.jsx"
+import React from 'react';
+
+const apiUrl = "https://fs-7-talenesia-backend.vercel.app";
 
 
 function App() {
@@ -13,7 +17,9 @@ function App() {
     >
       {/* <Quiz /> */}
       {/* { <Discussion /> } */}
-       <ModuleSelection/> 
+      {/* <Login/> */}
+       {/* <ModuleSelection/>  */}
+       <Login/>
        {/* <ChapterSelection/> */}
 
       {/* <Quiz /> */}
@@ -22,5 +28,5 @@ function App() {
     </div>
   );
 }
-
+export { apiUrl };
 export default App;
