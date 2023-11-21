@@ -24,12 +24,12 @@ const Recording = () => {
         layoutType="badge"
       ></LsLayout>
       <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/watch?v=RhP73IaX-gA"
-        title="YouTube video player"
+        width="100%"
+        height="500px"
+        src="https://www.youtube.com/embed/RhP73IaX-gA"
+        title="#1 Persiapan Belajar Untuk Jadi Admin Belajar Cara Belajar 1 [Recording - 17 Mei 2023]"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       ></iframe>
       <Spacer />
@@ -51,7 +51,7 @@ const Recording = () => {
           <Button
             backgroundColor="deepBlueSea"
             color="light.100"
-            onClick={handlePrevious}
+            // onClick={handlePrevious}
             _hover={{ background: "steelBlue", color: "light.80" }}
             alignContent={"center"}
           >

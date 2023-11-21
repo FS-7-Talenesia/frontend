@@ -3,6 +3,8 @@ import { Box, Flex, Text, CloseButton, Button } from "@chakra-ui/react";
 import { LuUploadCloud } from "react-icons/lu";
 import { FaFilePdf, FaFileAlt, FaFileWord } from "react-icons/fa";
 
+import axios from "axios";
+
 function DragDropFile() {
   const inputFileRef = useRef(null);
   const [files, setFiles] = useState([]);
@@ -12,8 +14,28 @@ function DragDropFile() {
   };
 
   const handleFileChange = (event) => {
-    setFiles([event.target.files[0]]);
-    event.target.value = null;
+    const file = event.target.files[0];
+    setFiles([file]);
+  };
+
+  const handleFileSubmission = () => {
+    const formData = new FormData();
+    formData.append("file", files[0]);
+    const token = localStorage.getItem("token");
+
+    axios
+      .post(
+        "https://fs-7-talenesia-backend.vercel.app/file/upload/submission/655b92f3af0f443905afce6f",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      .then((response) => console.log(response.data))
+      .catch((error) => console.error(error));
   };
 
   const handleDrag = (event) => {
@@ -110,6 +132,7 @@ function DragDropFile() {
           />
         </Box>
       ))}
+
       <Box textAlign="center">
         <Button
           type="submit"
@@ -118,6 +141,7 @@ function DragDropFile() {
           mb={8}
           _hover={{ backgroundColor: "blue" }}
           textStyle="body1Normal"
+          onClick={handleFileSubmission}
         >
           Kirim Tugas
         </Button>

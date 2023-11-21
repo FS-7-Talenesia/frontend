@@ -10,7 +10,7 @@ import {
   Input,
   Stack,
 } from "@chakra-ui/react";
-import { PasswordField } from "../../components/login/PasswordField";
+import { PasswordField } from "../../components/login/passwordField";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Fix import
 

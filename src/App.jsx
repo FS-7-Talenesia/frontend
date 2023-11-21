@@ -21,6 +21,9 @@ import Login from "./pages/loginPage/login";
 import FileSubmission from "./pages/fileSubmission/fileSubmission";
 import Quiz from "./pages/quiz/quiz";
 import Recording from "./pages/recording/recording";
+import QuizReview from "./pages/quizreview/quizReview";
+import PreQuiz from "./pages/preQuiz/preQuiz";
+import ForumDetail from "./pages/forumDetail/forumDetail";
 
 const router = createBrowserRouter([
   {
@@ -76,6 +79,19 @@ const router = createBrowserRouter([
     path: "/learn/recording",
     element: <Recording />,
   },
+  {
+    path: "/learn/prequiz",
+    element: <PreQuiz />,
+  },
+  {
+    path: "/learn/summary",
+    element: <QuizReview />,
+  },
+  {
+    path: "/learn/discussion",
+    element: <ForumDetail />,
+  },
+
   {
     path: "/login",
     element: <Login />,

@@ -68,7 +68,7 @@ function SidebarLearning({ onClose, isFinished }) {
             </p>
             <AccordionPanel pb={4}>
               <LinkBox>
-                <Link to={`/learn/`}>
+                <Link to={`/learn`}>
                   <HStack
                     borderRadius={10}
                     backgroundColor="steelBlue"
@@ -77,6 +77,82 @@ function SidebarLearning({ onClose, isFinished }) {
                     color="white"
                   >
                     <Text>Belajar Mandiri : Belajar Cara Belajar 1</Text>
+                    <Spacer />
+                    <Badge
+                      colorScheme={isFinished ? "green" : "red"}
+                      fontSize="sm"
+                    >
+                      {isFinished ? "Selesai" : "Belum Selesai"}
+                    </Badge>
+                  </HStack>
+                </Link>
+
+                <Link to={`/learn/quiz`}>
+                  <HStack
+                    borderRadius={10}
+                    backgroundColor="steelBlue"
+                    p={3}
+                    mb={2}
+                    color="white"
+                  >
+                    <Text>Kuiz</Text>
+                    <Spacer />
+                    <Badge
+                      colorScheme={isFinished ? "green" : "red"}
+                      fontSize="sm"
+                    >
+                      {isFinished ? "Selesai" : "Belum Selesai"}
+                    </Badge>
+                  </HStack>
+                </Link>
+
+                <Link to={`/learn/casestudy`}>
+                  <HStack
+                    borderRadius={10}
+                    backgroundColor="steelBlue"
+                    p={3}
+                    mb={2}
+                    color="white"
+                  >
+                    <Text>Studi Kasus</Text>
+                    <Spacer />
+                    <Badge
+                      colorScheme={isFinished ? "green" : "red"}
+                      fontSize="sm"
+                    >
+                      {isFinished ? "Selesai" : "Belum Selesai"}
+                    </Badge>
+                  </HStack>
+                </Link>
+
+                <Link to={`/learn/recording`}>
+                  <HStack
+                    borderRadius={10}
+                    backgroundColor="steelBlue"
+                    p={3}
+                    mb={2}
+                    color="white"
+                  >
+                    <Text>Recording</Text>
+                    <Spacer />
+                    <Badge
+                      colorScheme={isFinished ? "green" : "red"}
+                      fontSize="sm"
+                    >
+                      {isFinished ? "Selesai" : "Belum Selesai"}
+                    </Badge>
+                  </HStack>
+                </Link>
+
+                <Link to={`/learn/forum`}>
+                  <HStack
+                    borderRadius={10}
+                    backgroundColor="steelBlue"
+                    p={3}
+                    mb={2}
+                    color="white"
+                  >
+                    <Text>Diskusi Studi Kasus</Text>
                     <Spacer />
                     <Badge
                       colorScheme={isFinished ? "green" : "red"}
