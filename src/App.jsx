@@ -1,23 +1,23 @@
 // eslint-disable-next-line no-unused-vars
 
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard"
 
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
-} from "react-router-dom";
+} from "react-router-dom"
 
-import Profile from "./pages/profile/Profile";
-import Achievement from "./pages/achievement/Achievement";
-import CourseSelection from "./pages/courseSelection/courseSelection";
-import Grades from "./pages/grades/Grades";
-import ModuleSelection from "./pages/moduleSelection/moduleSelection";
-import ChapterSelection from "./pages/chapterSelection/chapterSelection";
-import Material from "./pages/material/material";
-import Discussion from "./pages/discussion/discussion";
-import Login from "./pages/loginPage/login";
+import Profile from "./pages/profile/Profile"
+import Achievement from "./pages/achievement/Achievement"
+import CourseSelection from "./pages/courseSelection/courseSelection"
+import Grades from "./pages/grades/Grades"
+import ModuleSelection from "./pages/moduleSelection/moduleSelection"
+import ChapterSelection from "./pages/chapterSelection/chapterSelection"
+import Material from "./pages/material/material"
+import Discussion from "./pages/discussion/discussion"
+import Login from "./pages/loginPage/login"
 
 const router = createBrowserRouter([
   {
@@ -65,13 +65,13 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
-]);
+])
 function App() {
   return (
     <div>
       <RouterProvider router={router} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

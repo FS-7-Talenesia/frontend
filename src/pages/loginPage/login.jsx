@@ -9,73 +9,77 @@ import {
   HStack,
   Input,
   Stack,
-} from '@chakra-ui/react';
-import { PasswordField } from '../../components/login/PasswordField';
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';  // Fix import
+} from "@chakra-ui/react"
+import { PasswordField } from "../../components/login/PasswordField"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom" // Fix import
 
 function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();  // Fix variable name
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const navigate = useNavigate() // Fix variable name
 
   const handleLogin = async () => {
     try {
-      const response = await fetch(`https://fs-7-talenesia-backend.vercel.app/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
-  
-      console.log('Response:', response.status);
-  
+      const response = await fetch(
+        `https://fs-7-talenesia-backend.vercel.app/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        }
+      )
+
+      console.log("Response:", response.status)
+
       // Store the response in a variable
-      const responseData = await response.json();
-      console.log('Response Body:', responseData);
-  
+      const responseData = await response.json()
+      console.log("Response Body:", responseData)
+
       if (response.ok) {
-        const { token, user } = responseData;
-  
-        localStorage.setItem('token', token);
-        localStorage.setItem('user', JSON.stringify(user));
-  
-        console.log('Login successful:', responseData);
-        navigate('/profile');
+        const { token, user } = responseData
+
+        localStorage.setItem("token", token)
+        localStorage.setItem("user", JSON.stringify(user))
+
+        console.log("Login successful:", responseData)
+        navigate("/profile")
       } else {
-        console.error('Login failed');
+        console.error("Login failed")
+        alert("Login Failed, Your Username and/or Password are incorrect")
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error)
     }
-  };
+  }
 
   return (
     <Container
       maxW="lg"
       py={{
-        base: '12',
-        md: '24',
+        base: "12",
+        md: "24",
       }}
       px={{
-        base: '0',
-        sm: '8',
+        base: "0",
+        sm: "8",
       }}
     >
       <Stack spacing="8">
         <Stack spacing="6">
           <Stack
             spacing={{
-              base: '2',
-              md: '3',
+              base: "2",
+              md: "3",
             }}
             textAlign="center"
           >
             <Heading
               size={{
-                base: 'xs',
-                md: 'sm',
+                base: "xs",
+                md: "sm",
               }}
             >
               Log in to your account
@@ -84,24 +88,24 @@ function Login() {
         </Stack>
         <Box
           py={{
-            base: '0',
-            sm: '8',
+            base: "0",
+            sm: "8",
           }}
           px={{
-            base: '4',
-            sm: '10',
+            base: "4",
+            sm: "10",
           }}
           bg={{
-            base: 'transparent',
-            sm: 'bg.surface',
+            base: "transparent",
+            sm: "bg.surface",
           }}
           boxShadow={{
-            base: 'none',
-            sm: 'md',
+            base: "none",
+            sm: "md",
           }}
           borderRadius={{
-            base: 'none',
-            sm: 'xl',
+            base: "none",
+            sm: "xl",
           }}
         >
           <Stack spacing="6">
@@ -115,7 +119,10 @@ function Login() {
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </FormControl>
-              <PasswordField value={password} onChange={(e) => setPassword(e.target.value)} />
+              <PasswordField
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </Stack>
             <HStack justify="space-between">
               <Checkbox defaultChecked>Remember me</Checkbox>
@@ -130,7 +137,7 @@ function Login() {
         </Box>
       </Stack>
     </Container>
-  );
+  )
 }
 
-export default Login;
+export default Login

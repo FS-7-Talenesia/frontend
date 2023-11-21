@@ -1,13 +1,13 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
-import { Box, Image, UnorderedList, ListItem, Flex } from "@chakra-ui/react";
-import { AiFillHome, AiFillSetting } from "react-icons/ai";
-import { BiLogOutCircle } from "react-icons/bi";
-import { BsBookFill } from "react-icons/bs";
-import { CgProfile } from "react-icons/cg";
-import { GiProgression } from "react-icons/gi";
+import React from "react"
+import { Box, Image, UnorderedList, ListItem, Flex } from "@chakra-ui/react"
+import { AiFillHome, AiFillSetting } from "react-icons/ai"
+import { BiLogOutCircle } from "react-icons/bi"
+import { BsBookFill } from "react-icons/bs"
+import { CgProfile } from "react-icons/cg"
+import { GiProgression } from "react-icons/gi"
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 function SidebarDashboard() {
   return (
@@ -143,7 +143,7 @@ function SidebarDashboard() {
               </ListItem>
             </Link>
 
-            <Link to={`/logout`}>
+            <Link to={`/login`}>
               <ListItem
                 listStyleType="none"
                 pt={5}
@@ -167,7 +167,7 @@ function SidebarDashboard() {
         </Box>
       </Box>
     </div>
-  );
+  )
 }
 
-export default SidebarDashboard;
+export default SidebarDashboard

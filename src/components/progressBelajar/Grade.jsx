@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React from "react"
 import {
   Box,
   Stack,
@@ -12,10 +12,10 @@ import {
   Flex,
   Grid,
   GridItem,
-} from "@chakra-ui/react";
+} from "@chakra-ui/react"
 
-import { BsCardChecklist } from "react-icons/bs";
-import SidebarDashboard from "../sidebar/SidebarDashboard";
+import { BsCardChecklist } from "react-icons/bs"
+import SidebarDashboard from "../sidebar/SidebarDashboard"
 
 function Grade() {
   return (
@@ -52,7 +52,7 @@ function Grade() {
                   fontFamily={"overlock"}
                 >
                   <GridItem w="100%" h="10" fontSize={20}>
-                    Kelas Admin HRGA
+                    Admin Perkantoran
                   </GridItem>
                   <GridItem w="100%" h="10" fontSize={20} ml={90}>
                     Nilai Course
@@ -114,7 +114,7 @@ function Grade() {
         </Accordion>
       </Box>
     </>
-  );
+  )
 }
 
-export default Grade;
+export default Grade

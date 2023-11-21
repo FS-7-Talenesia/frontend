@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React from "react"
 import {
   Box,
   Stack,
@@ -8,12 +8,11 @@ import {
   GridItem,
   Progress,
   Flex,
-  textDecoration,
-} from "@chakra-ui/react";
-import { FaCalendarAlt } from "react-icons/fa";
-import { IoIosAlarm } from "react-icons/io";
-import { Link } from "react-router-dom";
-import ForumCard from "../forumCard/forumCard";
+} from "@chakra-ui/react"
+import { FaCalendarAlt } from "react-icons/fa"
+import { IoIosAlarm } from "react-icons/io"
+import { Link } from "react-router-dom"
+import ForumCard from "../forumCard/forumCard"
 
 function DashboardComponent() {
   return (
@@ -193,7 +192,7 @@ function DashboardComponent() {
         </Grid>
       </Box>
     </>
-  );
+  )
 }
 
-export default DashboardComponent;
+export default DashboardComponent
