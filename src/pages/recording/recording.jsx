@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Box,
@@ -10,41 +10,28 @@ import {
 } from "@chakra-ui/react";
 import LsLayout from "../../components/learningScreenLayout/lsLayout";
 import { HiArrowRightCircle, HiArrowLeftCircle } from "react-icons/hi2";
-import { Worker } from "@react-pdf-viewer/core";
 
-import { Viewer } from "@react-pdf-viewer/core";
-import "@react-pdf-viewer/core/lib/styles/index.css";
+const Recording = () => {
+  const [isFinisihed, setFinished] = useState(false);
 
-const Material = () => {
-  const [isFinished, setFinished] = useState(false);
-  const boxRef = useRef(null);
-
-  const handleScroll = (e) => {
-    const bottom =
-      e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-    if (bottom) {
-      setFinished(true);
-    }
-  };
   return (
     <Container display="flex" flexDir="column" maxW="4xl" minH="100vh">
       <LsLayout
         courseName="Menjadi Admin Perkantoran"
         moduleName="Onboarding dan Pengenalan Materi"
         chapterName="Kuiz : Belajar Cara Belajar 1"
-        finish={isFinished}
+        finish={isFinisihed}
         layoutType="badge"
       ></LsLayout>
-
-      <div
-        style={{ overflowX: "auto", maxHeight: "80vh" }}
-        onScroll={handleScroll}
-        ref={boxRef}
-      >
-        <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-          <Viewer fileUrl="/src/pages/material/Pengenalan_Profesi_Admin.pdf" />
-        </Worker>
-      </div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/watch?v=RhP73IaX-gA"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
       <Spacer />
 
       <Box
@@ -64,12 +51,12 @@ const Material = () => {
           <Button
             backgroundColor="deepBlueSea"
             color="light.100"
-            // onClick={handlePrevious}
+            onClick={handlePrevious}
             _hover={{ background: "steelBlue", color: "light.80" }}
             alignContent={"center"}
           >
             <HiArrowLeftCircle fontSize={25} />
-            <Text ml={2}>Slide Sebelumnya</Text>
+            <Text ml={2}>Bagian Sebelumnya</Text>
           </Button>
           <Spacer />
           <Button
@@ -79,7 +66,7 @@ const Material = () => {
             _hover={{ background: "steelBlue", color: "light.80" }}
             alignContent={"center"}
           >
-            <Text mr={2}>Slide Selanjutnya</Text>
+            <Text mr={2}>Bagian Selanjutnya</Text>
             <HiArrowRightCircle fontSize={25} />
           </Button>
         </HStack>
@@ -88,4 +75,4 @@ const Material = () => {
   );
 };
 
-export default Material;
+export default Recording;

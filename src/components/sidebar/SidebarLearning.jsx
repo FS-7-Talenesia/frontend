@@ -11,14 +11,16 @@ import {
   Text,
   Flex,
   Progress,
-  LinkOverlay,
   LinkBox,
-  Link,
+  Badge,
+  HStack,
+  Spacer,
 } from "@chakra-ui/react";
 
 import "../sidebar/sidebar.css";
+import { Link } from "react-router-dom";
 
-function SidebarLearning({ onClose }) {
+function SidebarLearning({ onClose, isFinished }) {
   return (
     <div>
       {/* Module */}
@@ -39,7 +41,7 @@ function SidebarLearning({ onClose }) {
           </Box>
         </Flex>
         <Box pt={8} p={5}>
-          <Progress colorScheme="blue" size="md" hasStripe value={64} />
+          <Progress colorScheme="blue" size="md" hasStripe value={20} />
           <Flex>
             <Text fontFamily="overlock">Progress Belajar Anda</Text>
             <Text pl={3} color="#29B574">
@@ -59,23 +61,31 @@ function SidebarLearning({ onClose }) {
             <p>
               <AccordionButton>
                 <Box as="span" flex="1" textAlign="left" fontFamily="overlock">
-                  Course Name
+                  Belajar Cara Belajar
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             </p>
             <AccordionPanel pb={4}>
               <LinkBox>
-                <LinkOverlay href="#">
-                  <Box
+                <Link to={`/learn/`}>
+                  <HStack
                     borderRadius={10}
                     backgroundColor="steelBlue"
                     p={3}
+                    mb={2}
                     color="white"
                   >
-                    lorem ipsum dolor siamet
-                  </Box>
-                </LinkOverlay>
+                    <Text>Belajar Mandiri : Belajar Cara Belajar 1</Text>
+                    <Spacer />
+                    <Badge
+                      colorScheme={isFinished ? "green" : "red"}
+                      fontSize="sm"
+                    >
+                      {isFinished ? "Selesai" : "Belum Selesai"}
+                    </Badge>
+                  </HStack>
+                </Link>
               </LinkBox>
             </AccordionPanel>
           </AccordionItem>
@@ -91,7 +101,7 @@ function SidebarLearning({ onClose }) {
             </p>
             <AccordionPanel pb={4}>
               <LinkBox>
-                <LinkOverlay href="/google.com">
+                <Link href="/google.com">
                   <Box
                     borderRadius={10}
                     backgroundColor="steelBlue"
@@ -101,7 +111,7 @@ function SidebarLearning({ onClose }) {
                   >
                     lorem ipsum dolor siamet
                   </Box>
-                </LinkOverlay>
+                </Link>
               </LinkBox>
             </AccordionPanel>
           </AccordionItem>

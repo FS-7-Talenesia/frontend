@@ -9,15 +9,15 @@ import {
   HStack,
   Input,
   Stack,
-} from "@chakra-ui/react"
-import { PasswordField } from "../../components/login/PasswordField"
-import React, { useState } from "react"
-import { useNavigate } from "react-router-dom" // Fix import
+} from "@chakra-ui/react";
+import { PasswordField } from "../../components/login/PasswordField";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Fix import
 
 function Login() {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
-  const navigate = useNavigate() // Fix variable name
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Fix variable name
 
   const handleLogin = async () => {
     try {
@@ -30,30 +30,30 @@ function Login() {
           },
           body: JSON.stringify({ username, password }),
         }
-      )
+      );
 
-      console.log("Response:", response.status)
+      console.log("Response:", response.status);
 
       // Store the response in a variable
-      const responseData = await response.json()
-      console.log("Response Body:", responseData)
+      const responseData = await response.json();
+      console.log("Response Body:", responseData);
 
       if (response.ok) {
-        const { token, user } = responseData
+        const { token, user } = responseData;
 
-        localStorage.setItem("token", token)
-        localStorage.setItem("user", JSON.stringify(user))
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify(user));
 
-        console.log("Login successful:", responseData)
-        navigate("/profile")
+        console.log("Login successful:", responseData);
+        navigate("/profile");
       } else {
-        console.error("Login failed")
-        alert("Login Failed, Your Username and/or Password are incorrect")
+        console.error("Login failed");
+        alert("Login Failed, Your Username and/or Password are incorrect");
       }
     } catch (error) {
-      console.error("Error:", error)
+      console.error("Error:", error);
     }
-  }
+  };
 
   return (
     <Container
@@ -137,7 +137,7 @@ function Login() {
         </Box>
       </Stack>
     </Container>
-  )
+  );
 }
 
-export default Login
+export default Login;
